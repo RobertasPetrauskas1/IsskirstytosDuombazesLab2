@@ -1,0 +1,208 @@
+{
+	"info": {
+		"_postman_id": "2c18e470-5f47-4080-b6c2-f38ced7e22be",
+		"name": "DbLab2",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Student",
+			"item": [
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"carId\": 2,\r\n    \"year\": 2005,\r\n    \"brand\": \"volkswagen\",\r\n    \"price\": 455555,\r\n    \"fuel_type\": \"petrol\",\r\n    \"body_type\": \"sedan\",\r\n    \"is_chargable\": false,\r\n    \"engine_volume\": 2,\r\n    \"electric_range\": 8000,\r\n    \"power\": 105,\r\n    \"drive_wheels\": \"primary\",\r\n    \"is_wheel_left\": true,\r\n    \"amount_of_doors\": 5,\r\n    \"amount_of_seats\": 4,\r\n    \"uses_climate_control\": true,\r\n    \"color\": \"red\",\r\n    \"uses_hook\": true,\r\n    \"autopilot\": true,\r\n    \"navigation\": true,\r\n    \"heated_seats\": true,\r\n    \"leather_seats\": true,\r\n    \"autonomous_heater\": true,\r\n    \"vin\": 489484564,\r\n    \"modelId\": 9,\r\n    \"checked_history\": \"false\",\r\n    \"city\": \"Vilnius\",\r\n    \"euro_standart\": \"3\",\r\n    \"service_book\": \"true\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/car",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"car"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3001/student/102",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"student",
+								"102"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3001/student/102",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"student",
+								"102"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"year\": 2005,\r\n    \"brand\": \"bmw\",\r\n    \"price\": 455555,\r\n    \"fuel_type\": \"petrol\",\r\n    \"body_type\": \"sedan\",\r\n    \"is_chargable\": false,\r\n    \"engine_volume\": 2,\r\n    \"electric_range\": 8000,\r\n    \"power\": 105,\r\n    \"drive_wheels\": \"primary\",\r\n    \"is_wheel_left\": true,\r\n    \"amount_of_doors\": 5,\r\n    \"amount_of_seats\": 4,\r\n    \"uses_climate_control\": true,\r\n    \"color\": \"red\",\r\n    \"uses_hook\": true,\r\n    \"autopilot\": true,\r\n    \"navigation\": true,\r\n    \"heated_seats\": true,\r\n    \"leather_seats\": true,\r\n    \"autonomous_heater\": true,\r\n    \"vin\": 489484564,\r\n    \"modelId\": 9,\r\n    \"checked_history\": \"false\",\r\n    \"city\": \"Vilnius\",\r\n    \"euro_standart\": \"3\",\r\n    \"service_book\": \"true\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/car/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"car",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Item",
+			"item": [
+				{
+					"name": "Get",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3001/item/100",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"item",
+								"100"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"itemId\": 100,\r\n    \"fk_library\": 3,\r\n    \"name\": \"Hard Candy\",\r\n    \"description\": \"Maecenas leo odio, condimentum id, luctus nec, molestie sed, justo. Pellentesque viverra pede ac diam. Cras pellentesque volutpat dui.\",\r\n    \"borrow_time\": 22,\r\n    \"type\": \"magazine\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/item",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"item"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"fk_library\": 4,\r\n    \"name\": \"Hard Candy Updated\",\r\n    \"description\": \"Maecenas leo odio, condimentum id, luctus nec, molestie sed, justo. Pellentesque viverra pede ac diam. Cras pellentesque volutpat dui.\",\r\n    \"borrow_time\": 25,\r\n    \"type\": \"magazine\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/item/100",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"item",
+								"100"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": null
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

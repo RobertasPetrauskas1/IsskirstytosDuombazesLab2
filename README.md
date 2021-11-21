@@ -1,0 +1,2 @@
+- Project required node.js
+- To start project, first run `npm install` then run `nodemon index.js`
